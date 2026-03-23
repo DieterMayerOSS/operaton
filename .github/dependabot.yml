@@ -22,7 +22,7 @@ updates:
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
     labels:
       - "dependencies:maven"
-    milestone: 21
+    milestone: 14
     groups:
       httpcomponents5:
         patterns:
@@ -51,7 +51,7 @@ updates:
     target-branch: "main"
     labels:
       - "dependencies:npm"
-    milestone: 21
+    milestone: 14
     groups:
       angular:
         patterns:
@@ -89,7 +89,7 @@ updates:
     target-branch: "main"
     labels:
       - "dependencies:npm"
-    milestone: 21
+    milestone: 14
     groups:
       react:
         patterns:
@@ -103,7 +103,7 @@ updates:
     target-branch: "main"
     labels:
       - "dependencies:github-action"
-    milestone: 21
+    milestone: 14
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
@@ -111,7 +111,7 @@ updates:
     target-branch: "main"
     labels:
       - "dependencies:devcontainers"
-    milestone: 21
+    milestone: 14
 
   # Release 1.1.x branch - all updates
   - package-ecosystem: "maven"
@@ -133,7 +133,7 @@ updates:
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
     labels:
       - "dependencies:maven"
-    milestone: 18
+    milestone: 19
     groups:
       httpcomponents5:
         patterns:
@@ -162,7 +162,7 @@ updates:
     target-branch: "release/1.1.x"
     labels:
       - "dependencies:npm"
-    milestone: 18
+    milestone: 19
     groups:
       angular:
         patterns:
@@ -200,7 +200,7 @@ updates:
     target-branch: "release/1.1.x"
     labels:
       - "dependencies:npm"
-    milestone: 18
+    milestone: 19
     groups:
       react:
         patterns:
@@ -214,7 +214,7 @@ updates:
     target-branch: "release/1.1.x"
     labels:
       - "dependencies:github-action"
-    milestone: 18
+    milestone: 19
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
@@ -222,5 +222,5 @@ updates:
     target-branch: "release/1.1.x"
     labels:
       - "dependencies:devcontainers"
-    milestone: 18
+    milestone: 19
 
