@@ -63,6 +63,7 @@ auto-merge-rules:
       - 'io.undertow:undertow-servlet'
       - 'joda-time:joda-time'
       - 'net.javacrumbs.json-unit:*'
+      - 'org.apache.ant:ant'
       - 'org.apache.commons*'
       - 'org.apache.commons:commons-lang3'
       - 'org.apache.httpcomponents*'
