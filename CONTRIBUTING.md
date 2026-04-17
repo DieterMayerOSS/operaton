@@ -380,11 +380,33 @@ A list of bullet points giving a high-level overview of the contribution, e.g. w
 
 ## \<footer\>
 
-Must be `related to <ticket>` where ticket is the ticket number, e.g. CAM-1234. If the change is related to multiple 
-tickets, list them in a comma-separated list such as `related to CAM-1234, CAM-4321`.
+Must be `related to <ticket>` where ticket is the ticket number, e.g. `#1234`. If the change is related to multiple 
+tickets, list them in a comma-separated list such as `related to #1234, #4321`.
 
 Optionally, you can reference the number of the GitHub PR from which the commit is merged. The message footer can then 
-look like `related to <ticket>, closes #<pr_number>` such as `related to CAM-1234, closes #567`.
+look like `related to <ticket>, closes #<pr_number>` such as `related to #1234, closes #567`.
+
+## AI coding assistants
+
+_(adopted from [Linux Kernel guidline](https://docs.kernel.org/process/coding-assistants.html?ref=itsfoss.com))_
+
+Contributions should include an Assisted-by tag in the following format:
+
+`Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1] [TOOL2]`
+
+Where:
+
+`AGENT_NAME` is the name of the AI tool or framework
+
+`MODEL_VERSION` is the specific model version used
+
+`[TOOL1] [TOOL2]` are optional specialized analysis tools used.
+
+Basic development tools (git, gcc, make, editors) should not be listed.
+
+Example:
+
+`Assisted-by: Claude:claude-3-opus coccinelle sparse`
 
 # Review process
 
