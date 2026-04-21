@@ -60,7 +60,7 @@ import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
  *   <li>{@code loadtest.users} - concurrent users (default: 30)</li>
  *   <li>{@code loadtest.warmup.seconds} - warmup duration (default: 10)</li>
  *   <li>{@code loadtest.sustained.seconds} - sustained load duration (default: 60)</li>
- *   <li>{@code loadtest.processKey} - process definition key (default: credit-eligibility)</li>
+ *   <li>{@code loadtest.processKey} - process definition key (default: item-approval)</li>
  *   <li>{@code loadtest.withVariablesInReturn} - include variables in response (default: true)</li>
  * </ul>
  *
@@ -80,7 +80,7 @@ class MemoryLeakLoadTest {
   private static final int WARMUP_SECONDS = Integer.getInteger("loadtest.warmup.seconds", 10);
   private static final int SUSTAINED_SECONDS = Integer.getInteger("loadtest.sustained.seconds", 60);
   private static final int MEMORY_SAMPLES = Integer.getInteger("loadtest.memory.samples", 6);
-  private static final String PROCESS_KEY = System.getProperty("loadtest.processKey", "credit-eligibility");
+  private static final String PROCESS_KEY = System.getProperty("loadtest.processKey", "item-approval");
   private static final boolean WITH_VARIABLES_IN_RETURN =
       Boolean.parseBoolean(System.getProperty("loadtest.withVariablesInReturn", "true"));
 
@@ -272,7 +272,7 @@ class MemoryLeakLoadTest {
             "variables": {
               "INPUT": {
                 "type": "Json",
-                "value": "{\\"policy\\":\\"ELIGIBILITY\\",\\"customerId\\":\\"123\\",\\"amount\\":50,\\"age\\":20}",
+                "value": "{\\"policy\\":\\"EVALUATION\\",\\"itemId\\":\\"001\\",\\"amount\\":50,\\"score\\":20}",
                 "valueInfo": {
                   "serializationDataFormat": "application/json"
                 }
@@ -281,7 +281,7 @@ class MemoryLeakLoadTest {
                 "type": "String",
                 "value": "http://localhost:%s"
               },
-              "EMPLOYMENT_API_URL": {
+              "SERVICE_API_URL": {
                 "type": "String",
                 "value": "http://localhost:%s"
               },
@@ -307,45 +307,44 @@ class MemoryLeakLoadTest {
   }
 
   private void setupWireMockStubs() {
-    wireMockServer.stubFor(get(urlPathEqualTo("/api/customers/123"))
+    wireMockServer.stubFor(get(urlPathEqualTo("/api/items/001"))
         .willReturn(aResponse()
             .withStatus(200)
             .withHeader("Content-Type", "application/json")
             .withBody("""
                 {
-                  "customerId": "cust-001",
-                  "document": "12345678900",
-                  "birthDate": "1990-05-15",
-                  "age": 35,
-                  "employmentRelationship": {
-                    "admissionDate": "2020-10-01",
-                    "employer": { "document": "11222333000144" },
-                    "category": 101,
-                    "toj": 24,
-                    "grossSalary": 4000.0,
-                    "netSalary": 3200.0,
-                    "realNetSalary": 2800.0,
-                    "demissionDate": null,
+                  "itemId": "item-001",
+                  "entityId": "entity-001",
+                  "score": 35,
+                  "relationship": {
+                    "enrollmentDate": "2020-10-01",
+                    "provider": { "id": "provider-001" },
+                    "category": 1,
+                    "score": 24,
+                    "quota": 4000.0,
+                    "baseQuota": 3200.0,
+                    "adjustedQuota": 2800.0,
+                    "endDate": null,
                     "status": "ACTIVE"
                   }
                 }
                 """)));
 
-    wireMockServer.stubFor(get(urlPathEqualTo("/api/employment/termination"))
-        .withQueryParam("id", equalTo("12345678900"))
+    wireMockServer.stubFor(get(urlPathEqualTo("/api/service/status-a"))
+        .withQueryParam("id", equalTo("entity-001"))
         .withHeader("API-KEY", equalTo("test-api-key"))
         .willReturn(aResponse()
             .withStatus(200)
             .withHeader("Content-Type", "application/json")
-            .withBody("{ \"hasTermination\": false }")));
+            .withBody("{ \"hasStatusA\": false }")));
 
-    wireMockServer.stubFor(get(urlPathEqualTo("/api/employment/leave"))
-        .withQueryParam("id", equalTo("12345678900"))
+    wireMockServer.stubFor(get(urlPathEqualTo("/api/service/status-b"))
+        .withQueryParam("id", equalTo("entity-001"))
         .withHeader("API-KEY", equalTo("test-api-key"))
         .willReturn(aResponse()
             .withStatus(200)
             .withHeader("Content-Type", "application/json")
-            .withBody("{ \"hasLeave\": false }")));
+            .withBody("{ \"hasStatusB\": false }")));
   }
 
   private static void forceGc() {

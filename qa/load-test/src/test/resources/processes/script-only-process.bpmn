@@ -9,12 +9,12 @@
     <bpmn:startEvent id="start"/>
     <bpmn:scriptTask id="script1" name="Script 1" scriptFormat="javascript">
       <bpmn:script>
-        var input = S('{"policy":"ELEGIBILITY","customerId":"123","amount":50,"age":20}');
+        var input = S('{"policy":"EVALUATION","itemId":"001","amount":50,"score":20}');
         var policy = input.prop("policy").stringValue();
-        var customerId = input.prop("customerId").stringValue();
+        var itemId = input.prop("itemId").stringValue();
         var amount = input.prop("amount").numberValue();
         execution.setVariable("policy", policy);
-        execution.setVariable("customerId", customerId);
+        execution.setVariable("itemId", itemId);
         execution.setVariable("amount", amount);
       </bpmn:script>
     </bpmn:scriptTask>

@@ -11,7 +11,7 @@
       <bpmn:extensionElements>
         <camunda:connector>
           <camunda:inputOutput>
-            <camunda:inputParameter name="url">${BASE_URL}/api/customers/123</camunda:inputParameter>
+            <camunda:inputParameter name="url">${BASE_URL}/api/items/001</camunda:inputParameter>
             <camunda:inputParameter name="method">GET</camunda:inputParameter>
             <camunda:inputParameter name="headers">
               <camunda:map>
@@ -27,7 +27,7 @@
       <bpmn:extensionElements>
         <camunda:connector>
           <camunda:inputOutput>
-            <camunda:inputParameter name="url">${EMPLOYMENT_API_URL}/api/employment/termination?id=02586611195</camunda:inputParameter>
+            <camunda:inputParameter name="url">${SERVICE_API_URL}/api/service/status-a?id=item-001</camunda:inputParameter>
             <camunda:inputParameter name="method">GET</camunda:inputParameter>
             <camunda:inputParameter name="headers">
               <camunda:map>
@@ -43,7 +43,7 @@
       <bpmn:extensionElements>
         <camunda:connector>
           <camunda:inputOutput>
-            <camunda:inputParameter name="url">${EMPLOYMENT_API_URL}/api/employment/leave?id=02586611195</camunda:inputParameter>
+            <camunda:inputParameter name="url">${SERVICE_API_URL}/api/service/status-b?id=item-001</camunda:inputParameter>
             <camunda:inputParameter name="method">GET</camunda:inputParameter>
             <camunda:inputParameter name="headers">
               <camunda:map>

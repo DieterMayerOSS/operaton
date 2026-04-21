@@ -35,7 +35,7 @@ System properties can be passed via `-D` flags:
 | `loadtest.warmup.seconds`        | 10                 | Warmup phase duration                                |
 | `loadtest.sustained.seconds`     | 60                 | Sustained load phase duration                        |
 | `loadtest.memory.samples`        | 6                  | Number of heap memory samples during sustained phase |
-| `loadtest.processKey`            | credit-eligibility | Process definition key to test                       |
+| `loadtest.processKey`            | item-approval      | Process definition key to test                       |
 | `loadtest.withVariablesInReturn` | true               | Include variables in start response                  |
 
 Example with custom settings:
@@ -58,10 +58,10 @@ These are set in `pom.xml` via the `maven-failsafe-plugin` configuration.
 
 1. **Spring Boot Application** starts with H2 in-memory database, HTTP connector, and Spin JSON plugins
 2. **WireMock** serves three mock endpoints:
-   - `GET /api/customers/123` — customer data
-   - `GET /api/employment/termination` — rescisão check
-   - `GET /api/employment/leave` — afastamento check
-3. **Process variables** `BASE_URL` and `EMPLOYMENT_API_URL` point to the WireMock server
+   - `GET /api/items/001` — item data
+   - `GET /api/service/status-a` — status check A
+   - `GET /api/service/status-b` — status check B
+3. **Process variables** `BASE_URL` and `SERVICE_API_URL` point to the WireMock server
 4. **Concurrent threads** simulate concurrent users calling the REST API to start process instances
 5. **Memory monitoring** samples heap usage at regular intervals
 
@@ -112,9 +112,9 @@ Then analyze with `jfr print target/loadtest.jfr` or JDK Mission Control.
 
 ## BPMN Process
 
-The `credit-eligibility` process:
+The `item-approval` process:
 - Starts via REST API with JSON input variable
 - Executes synchronously (no async boundaries)
 - Makes 3 HTTP connector GET calls to external services
-- Evaluates 3 DMN decision tables (age, fee, TOJ)
+- Evaluates 2 DMN decision tables (rule A, rule B)
 - Uses Spin JSON extensively for variable transformation
