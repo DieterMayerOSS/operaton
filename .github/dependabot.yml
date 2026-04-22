@@ -42,7 +42,8 @@ updates:
           - "org.jboss.weld:weld-core-bom"
       openrewrite:
         patterns:
-          - "org.openrewrite.recipe:*"
+        - "org.openrewrite.recipe:*"
+        - "org.openrewrite.maven:*"
       arquillian:
         patterns:
           - "org.jboss.arquillian*:*"
@@ -173,6 +174,7 @@ updates:
       openrewrite:
         patterns:
         - "org.openrewrite.recipe:*"
+        - "org.openrewrite.maven:*"
       arquillian:
         patterns:
           - "org.jboss.arquillian*:*"
