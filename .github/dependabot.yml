@@ -237,6 +237,10 @@ updates:
       - dependency-name: "eslint*"
         # Known incompatibility with eslint 10
         update-types: ["version-update:semver-major"]
+      - dependency-name: "bootstrap"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "jquery"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: "npm"
     directory: "/engine-rest/docs"
     schedule:
@@ -369,6 +373,10 @@ updates:
     ignore:
     - dependency-name: "eslint*"
       # Known incompatibility with eslint 10
+      update-types: ["version-update:semver-major"]
+    - dependency-name: "bootstrap"
+      update-types: ["version-update:semver-major"]
+    - dependency-name: "jquery"
       update-types: ["version-update:semver-major"]
   - package-ecosystem: "npm"
     directory: "/engine-rest/docs"
