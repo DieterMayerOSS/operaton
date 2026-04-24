@@ -24,7 +24,7 @@ updates:
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
     labels:
       - "dependencies:maven"
-    milestone: 14
+    milestone: 23
     groups:
       spring-boot:
         patterns:
@@ -60,7 +60,7 @@ updates:
         update-types: ["version-update:semver-major"]
     labels:
       - "dependencies:maven"
-    milestone: 14
+    milestone: 23
     groups:
       spring-boot:
         patterns:
@@ -75,7 +75,7 @@ updates:
     target-branch: "main"
     labels:
       - "dependencies:npm"
-    milestone: 14
+    milestone: 23
     groups:
       angular:
         patterns:
@@ -113,7 +113,7 @@ updates:
     target-branch: "main"
     labels:
       - "dependencies:npm"
-    milestone: 14
+    milestone: 23
     groups:
       react:
         patterns:
@@ -128,7 +128,7 @@ updates:
     target-branch: "main"
     labels:
       - "dependencies:github-action"
-    milestone: 14
+    milestone: 23
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
@@ -136,7 +136,7 @@ updates:
     target-branch: "main"
     labels:
       - "dependencies:devcontainers"
-    milestone: 14
+    milestone: 23
 
   # Release 1.1.x branch - all updates
   - package-ecosystem: "maven"
@@ -152,7 +152,7 @@ updates:
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
     labels:
       - "dependencies:maven"
-    milestone: 19
+    milestone: 20
     groups:
       httpcomponents5:
         patterns:
@@ -188,7 +188,7 @@ updates:
         update-types: ["version-update:semver-major"]
     labels:
       - "dependencies:maven"
-    milestone: 19
+    milestone: 20
     groups:
       spring-boot:
         patterns:
@@ -203,7 +203,7 @@ updates:
     target-branch: "release/1.1.x"
     labels:
       - "dependencies:npm"
-    milestone: 19
+    milestone: 20
     groups:
       angular:
         patterns:
@@ -245,7 +245,7 @@ updates:
     target-branch: "release/1.1.x"
     labels:
       - "dependencies:npm"
-    milestone: 19
+    milestone: 20
     groups:
       react:
         patterns:
@@ -259,7 +259,7 @@ updates:
     target-branch: "release/1.1.x"
     labels:
       - "dependencies:github-action"
-    milestone: 19
+    milestone: 20
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
@@ -267,7 +267,7 @@ updates:
     target-branch: "release/1.1.x"
     labels:
       - "dependencies:devcontainers"
-    milestone: 19
+    milestone: 20
 
 # Release 2.1.x branch - all updates
   - package-ecosystem: "maven"
@@ -283,7 +283,7 @@ updates:
       update-types: ["version-update:semver-major", "version-update:semver-minor"]
     labels:
     - "dependencies:maven"
-    milestone: 14
+    milestone: 22
     groups:
       httpcomponents5:
         patterns:
@@ -319,7 +319,7 @@ updates:
       update-types: ["version-update:semver-major"]
     labels:
     - "dependencies:maven"
-    milestone: 14
+    milestone: 22
     groups:
       spring-boot:
         patterns:
@@ -334,7 +334,7 @@ updates:
     target-branch: "release/2.1.x"
     labels:
     - "dependencies:npm"
-    milestone: 14
+    milestone: 22
     groups:
       angular:
         patterns:
@@ -376,7 +376,7 @@ updates:
     target-branch: "release/2.1.x"
     labels:
     - "dependencies:npm"
-    milestone: 14
+    milestone: 22
     groups:
       react:
         patterns:
@@ -390,7 +390,7 @@ updates:
     target-branch: "release/2.1.x"
     labels:
     - "dependencies:github-action"
-    milestone: 14
+    milestone: 22
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
@@ -398,4 +398,4 @@ updates:
     target-branch: "release/2.1.x"
     labels:
     - "dependencies:devcontainers"
-    milestone: 14
+    milestone: 22
