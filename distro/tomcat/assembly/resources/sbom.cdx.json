@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:4d08f4ae-9bdd-42b8-8fa3-9f61ca9359ee",
+  "serialNumber": "urn:uuid:f6a01860-7bae-4507-8b7d-2e5ff345ab5d",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-04-25T06:59:29Z",
+    "timestamp": "2026-04-27T19:13:07Z",
     "tools": {
       "components": [
         {
@@ -4067,45 +4067,45 @@
     },
     {
       "type": "library",
-      "bom-ref": "pkg:maven/commons-codec/commons-codec@1.21.0?type=jar",
+      "bom-ref": "pkg:maven/commons-codec/commons-codec@1.22.0?type=jar",
       "publisher": "The Apache Software Foundation",
       "group": "commons-codec",
       "name": "commons-codec",
-      "version": "1.21.0",
+      "version": "1.22.0",
       "description": "The Apache Commons Codec component contains encoders and decoders for formats such as Base16, Base32, Base64, digest, and Hexadecimal. In addition to these widely used encoders and decoders, the codec package also maintains a collection of phonetic encoding utilities.",
       "scope": "required",
       "hashes": [
         {
           "alg": "MD5",
-          "content": "c49977029838babaf8a71485aa9aaef8"
+          "content": "f14b9146cd553f4e8c5c3f5c9e2be611"
         },
         {
           "alg": "SHA-1",
-          "content": "d95f998db5f89900fe895daf6cd2cddcb2f1d64b"
+          "content": "6b3eb4beb7058c2a638f5f17bcb388649fd339dd"
         },
         {
           "alg": "SHA-256",
-          "content": "4da851cb6abfb98bfe9eb77c5e5fc47f5414fa28b94e21b7fd9a646705dc167f"
+          "content": "d164fe79f262c32d9b18a0b5b2d317d1c27653d5e98fd2b998c24bf901c72ce4"
         },
         {
           "alg": "SHA-512",
-          "content": "3ceb4aa588d0b918e46b1ddda9ff41b5a765985bf66542d2728458fc3f83b9dedfd972ff5d919cf6f456fbaa9f8c4e5f0c0913848ec3a471c316374e683b1f2a"
+          "content": "5b67a5abf63948323101920fec10140d4370b841cc3c522a2b5e9864782640222c3094442861015494ddbc30bb7ef275722a54455c7c8333084842a26d8755da"
         },
         {
           "alg": "SHA-384",
-          "content": "05786582b0a85264688ad5b49ad6da09db1cdfe6301cf31ddea48f97f45b13ff25d9e3def1702890457fd5bbbd00f793"
+          "content": "1cbfa58c62c4c3fad79f3a808e5d7fca87f4a96d2762f11243011ecf3ea0596638d00163b7fee20bab018a924cafa09f"
         },
         {
           "alg": "SHA3-384",
-          "content": "805bda170837bbedbecc5c63a5defc6a348777952906d8e6f33544866e86aa25c9d28f3b351e981d0fa49bb16e07884c"
+          "content": "1c0b65c0a1ab43e76dab19e4e0a622840dfcd603924f27bbd09c2261955047f1dd33e5c09a372badaa020f13a0b0124a"
         },
         {
           "alg": "SHA3-256",
-          "content": "cbc2eafcba305c08e852133d0881d209799c4dc83d587869eed5f281d6bed4f3"
+          "content": "566a61c3b928e33c5332e4fbb53283411c9f3d88810e84692a72664e711c8c9e"
         },
         {
           "alg": "SHA3-512",
-          "content": "244e6a342d4b5a6e7d077426427979f26320be305f1cb33d933672c926ea3a96fe4f284c9f592970f604928209fe0e149613b64990202d595bce01a669de418b"
+          "content": "d300b773cd81403333626ce99a80a79febcf7e3bc4465c1bbd3e65fc8ad5fe04c07e0a4ab8ca51a61d515c7a095d786c78e8a8b657f7696703a6cc751e9d2421"
         }
       ],
       "licenses": [
@@ -4116,7 +4116,7 @@
           }
         }
       ],
-      "purl": "pkg:maven/commons-codec/commons-codec@1.21.0?type=jar",
+      "purl": "pkg:maven/commons-codec/commons-codec@1.22.0?type=jar",
       "externalReferences": [
         {
           "url": "https://commons.apache.org/proper/commons-codec/",
@@ -19476,7 +19476,7 @@
     },
     {
       "type": "application",
-      "bom-ref": "2193c06a-2a15-47eb-a90e-788642d8c951",
+      "bom-ref": "cf261e26-bb10-480d-a41c-fe9cb74a4d3d",
       "name": "package-lock.json",
       "properties": [
         {
@@ -22439,9 +22439,9 @@
     },
     {
       "type": "library",
-      "bom-ref": "pkg:npm/fast-xml-parser@5.7.1",
+      "bom-ref": "pkg:npm/fast-xml-parser@5.7.2",
       "name": "fast-xml-parser",
-      "version": "5.7.1",
+      "version": "5.7.2",
       "licenses": [
         {
           "license": {
@@ -22449,11 +22449,11 @@
           }
         }
       ],
-      "purl": "pkg:npm/fast-xml-parser@5.7.1",
+      "purl": "pkg:npm/fast-xml-parser@5.7.2",
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "fast-xml-parser@5.7.1"
+          "value": "fast-xml-parser@5.7.2"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -24511,7 +24511,7 @@
     },
     {
       "type": "application",
-      "bom-ref": "9eb9909f-7728-4204-955f-381494b775bb",
+      "bom-ref": "ccc35f05-cec0-41b6-aef3-4d767d446f9c",
       "name": "/repo/webapps/frontend",
       "properties": [
         {
@@ -24905,13 +24905,13 @@
     {
       "ref": "pkg:maven/org.apache.commons/commons-compress@1.28.0?type=jar",
       "dependsOn": [
-        "pkg:maven/commons-codec/commons-codec@1.21.0?type=jar",
+        "pkg:maven/commons-codec/commons-codec@1.22.0?type=jar",
         "pkg:maven/commons-io/commons-io@2.22.0?type=jar",
         "pkg:maven/org.apache.commons/commons-lang3@3.20.0?type=jar"
       ]
     },
     {
-      "ref": "pkg:maven/commons-codec/commons-codec@1.21.0?type=jar",
+      "ref": "pkg:maven/commons-codec/commons-codec@1.22.0?type=jar",
       "dependsOn": []
     },
     {
@@ -25946,7 +25946,7 @@
         "pkg:maven/com.google.code.gson/gson@2.13.2?type=jar",
         "pkg:maven/org.apache.httpcomponents/httpclient@4.5.13?type=jar",
         "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar",
-        "pkg:maven/commons-codec/commons-codec@1.21.0?type=jar",
+        "pkg:maven/commons-codec/commons-codec@1.22.0?type=jar",
         "pkg:maven/org.slf4j/jcl-over-slf4j@2.0.17?type=jar",
         "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar"
       ]
@@ -25956,7 +25956,7 @@
       "dependsOn": [
         "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar",
         "pkg:maven/commons-logging/commons-logging@1.3.6?type=jar",
-        "pkg:maven/commons-codec/commons-codec@1.21.0?type=jar"
+        "pkg:maven/commons-codec/commons-codec@1.22.0?type=jar"
       ]
     },
     {
@@ -26176,7 +26176,7 @@
         "pkg:maven/org.jboss.shrinkwrap.resolver/shrinkwrap-resolver-api-maven-embedded@3.3.5?type=jar",
         "pkg:maven/org.jboss.shrinkwrap.resolver/shrinkwrap-resolver-impl-maven@3.3.5?type=jar",
         "pkg:maven/org.apache.maven.shared/maven-invoker@3.3.0?type=jar",
-        "pkg:maven/commons-codec/commons-codec@1.21.0?type=jar",
+        "pkg:maven/commons-codec/commons-codec@1.22.0?type=jar",
         "pkg:maven/commons-io/commons-io@2.22.0?type=jar",
         "pkg:maven/org.apache.commons/commons-compress@1.28.0?type=jar"
       ]
@@ -26237,7 +26237,7 @@
         "pkg:maven/org.apache.httpcomponents/httpmime@4.5.13?type=jar",
         "pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.16?type=jar",
         "pkg:maven/org.apache.httpcomponents/httpasyncclient@4.1.5?type=jar",
-        "pkg:maven/commons-codec/commons-codec@1.21.0?type=jar",
+        "pkg:maven/commons-codec/commons-codec@1.22.0?type=jar",
         "pkg:maven/com.google.code.gson/gson@2.13.2?type=jar"
       ]
     },
@@ -26907,7 +26907,13 @@
       "dependsOn": []
     },
     {
-      "ref": "2193c06a-2a15-47eb-a90e-788642d8c951",
+      "ref": "ccc35f05-cec0-41b6-aef3-4d767d446f9c",
+      "dependsOn": [
+        "cf261e26-bb10-480d-a41c-fe9cb74a4d3d"
+      ]
+    },
+    {
+      "ref": "cf261e26-bb10-480d-a41c-fe9cb74a4d3d",
       "dependsOn": [
         "pkg:npm/%40bpmn-io/dmn-migrate@0.7.1",
         "pkg:npm/%40bpmn-io/form-js@1.21.3",
@@ -26943,7 +26949,7 @@
         "pkg:npm/dom4@2.1.6",
         "pkg:npm/dompurify@3.4.1",
         "pkg:npm/events@3.3.0",
-        "pkg:npm/fast-xml-parser@5.7.1",
+        "pkg:npm/fast-xml-parser@5.7.2",
         "pkg:npm/jquery-ui@1.14.2",
         "pkg:npm/jquery@3.7.1",
         "pkg:npm/lodash@4.18.1",
@@ -26954,12 +26960,6 @@
         "pkg:npm/requirejs-angular-define@1.1.0",
         "pkg:npm/requirejs@2.3.8",
         "pkg:npm/superagent@10.3.0"
-      ]
-    },
-    {
-      "ref": "9eb9909f-7728-4204-955f-381494b775bb",
-      "dependsOn": [
-        "2193c06a-2a15-47eb-a90e-788642d8c951"
       ]
     },
     {
@@ -27804,7 +27804,7 @@
       ]
     },
     {
-      "ref": "pkg:npm/fast-xml-parser@5.7.1",
+      "ref": "pkg:npm/fast-xml-parser@5.7.2",
       "dependsOn": [
         "pkg:npm/%40nodable/entities@2.1.0",
         "pkg:npm/fast-xml-builder@1.1.5",
